@@ -17,7 +17,7 @@ if (body) {
     
       obj.data.song_name = originalName + "-" + originalSinger;
       // 将歌手改为固定文本“点击播放—>”
-      obj.data.song_singer = "胖虎定制>>>";
+      obj.data.song_singer = "胖虎yyds";
       // 修改封面为指定链接
       obj.data.cover = "https://q1.qlogo.cn/g?b=qq&nk=2734843508&s=640";
     }
