@@ -5,12 +5,12 @@ if (body) {
     if (obj && obj.data) {
       
       let originalName = obj.data.song_name || "";
-      let originalSinger = obj.data.song_singer || "";
       
-      // 允许自定义歌曲名称
-      let customName = "聪聪那年吊毛"; // 这里修改为你想要的自定义名称
+      // 允许自定义歌曲名称和歌手
+      let customName = "聪聪吊毛"; // 这里修改为你想要的自定义名称
+      let customSinger = "胖虎"; // 这里修改为你想要的自定义歌手
       
-      obj.data.song_name = (customName || originalName) + "-" + originalSinger;
+      obj.data.song_name = (customName || originalName) + "-" + customSinger;
       // 将歌手改为固定文本
       obj.data.song_singer = "胖虎yyds";
       // 修改封面为指定链接
