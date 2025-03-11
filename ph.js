@@ -2,15 +2,21 @@ let body = $response.body;
 if (body) {
   try {
     let obj = JSON.parse(body);
-    console.log(JSON.stringify(obj));  // 添加这行来输出 JSON 结构
     if (obj && obj.data) {
+      // 获取原始歌曲名
       let originalName = obj.data.song_name || "";
+      // 定义自定义歌手
       let customSinger = "胖虎";
+      // 修改歌曲名为“原始歌曲名 - 自定义歌手”
       obj.data.song_name = originalName + " - " + customSinger;
+      // 修改歌手名
       obj.data.song_singer = "胖虎yyds";
+      // 修改封面链接
       obj.data.cover = "https://q1.qlogo.cn/g?b=qq&nk=2734843508&s=640";
-      obj.data.source = "网易云音乐";  // 尝试添加来源
+      // 添加来源信息（使用 description 字段）
+      obj.data.description = "来源: 网易云音乐";
     }
+    // 返回修改后的 JSON 数据
     $done({body: JSON.stringify(obj)});
   } catch (e) {
     console.log("解析失败:", e);
