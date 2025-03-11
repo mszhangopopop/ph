@@ -17,7 +17,7 @@ if (body) {
       // 修改封面为指定链接
       obj.data.cover = "https://q1.qlogo.cn/g?b=qq&nk=2734843508&s=640";
 
-      // 尝试写入多个可能的字段
+      // **尝试修改不同的字段，看看哪个能显示在卡片底部**
       obj.data.source = source;
       obj.data.platform = source;
       obj.data.origin = source;
@@ -25,6 +25,10 @@ if (body) {
       obj.data.forward_platform = source;
       obj.data.transmit_from = source;
       obj.data.repost_from = source;
+      obj.data.display_source = source;
+      obj.data.share_source = source;
+      obj.data.post_source = source;
+      obj.data.relay_from = source;
 
     }
     console.log("修改后的 JSON 数据:", JSON.stringify(obj)); // 输出 JSON 方便调试
