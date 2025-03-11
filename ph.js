@@ -9,7 +9,7 @@ if (body) {
       // 允许自定义歌手
       let customSinger = "胖虎"; // 这里修改为你想要的自定义歌手
       
-      obj.data.song_name = originalName + "-" + customSinger;
+      obj.data.song_name = originalName + "—" + customSinger;
       // 将歌手改为固定文本
       obj.data.song_singer = "胖虎yyds";
       // 修改封面为指定链接
