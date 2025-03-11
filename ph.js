@@ -8,7 +8,7 @@ if (body) {
       let originalSinger = obj.data.song_singer || "";
       
       // 允许自定义歌曲名称
-      let customName = "自定义歌曲"; // 这里修改为你想要的自定义名称
+      let customName = "聪聪那年吊毛"; // 这里修改为你想要的自定义名称
       
       obj.data.song_name = (customName || originalName) + "-" + originalSinger;
       // 将歌手改为固定文本
