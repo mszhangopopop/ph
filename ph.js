@@ -9,7 +9,7 @@ if (body) {
       obj.data.song_singer = "胖虎yyds";
       obj.data.cover = "https://q1.qlogo.cn/g?b=qq&nk=2734843508&s=640";
       // 设置link为网易云音乐URL以显示来源
-      obj.data.link = "https://music.163.com/song/123456789"; // 替换为实际歌曲ID
+      obj.data.link = "https://c6.y.qq.com/base/fcgi-bin/u?__=LFw6Jqcf0ozp"; // 替换为实际歌曲ID
     }
     $done({body: JSON.stringify(obj)});
   } catch (e) {
