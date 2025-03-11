@@ -17,7 +17,7 @@ if (body) {
       // 修改封面为指定链接
       obj.data.cover = "https://q1.qlogo.cn/g?b=qq&nk=2734843508&s=640";
 
-      // **尝试修改不同的字段，看看哪个能显示在卡片底部**
+      // **直接设置可能的来源字段**
       obj.data.source = source;
       obj.data.platform = source;
       obj.data.origin = source;
@@ -29,6 +29,25 @@ if (body) {
       obj.data.share_source = source;
       obj.data.post_source = source;
       obj.data.relay_from = source;
+
+      // **尝试嵌套 source_info 结构**
+      obj.data.source_info = {
+        source_name: source, // 可能的来源名称字段
+        source_type: "音乐平台", // 可能需要的类型
+        source_icon: "https://q1.qlogo.cn/g?b=qq&nk=2734843508&s=640" // 可能需要来源图标
+      };
+
+      // **尝试嵌套 repost_info 结构**
+      obj.data.repost_info = {
+        repost_from: source, 
+        repost_platform: source
+      };
+
+      // **尝试嵌套 origin_info 结构**
+      obj.data.origin_info = {
+        origin_name: source,
+        origin_platform: source
+      };
 
     }
     console.log("修改后的 JSON 数据:", JSON.stringify(obj)); // 输出 JSON 方便调试
