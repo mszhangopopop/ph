@@ -4,9 +4,8 @@ if (body) {
     let obj = JSON.parse(body);
     if (obj && obj.data) {
       let originalName = obj.data.song_name || "";
-      let customSinger = "胖虎专属"; // 修改为您想要的自定义歌手
-      // 将来源信息附加到歌曲名
-      obj.data.song_name = originalName + " - " + customSinger + " (来源: 网易云音乐)";
+      let customSinger = "胖虎"; // 修改为您想要的自定义歌手
+      obj.data.song_name = originalName + " - " + customSinger;
       obj.data.song_singer = "胖虎yyds";
       obj.data.cover = "https://q1.qlogo.cn/g?b=qq&nk=2734843508&s=640";
       // 保留link字段修改（尽管可能无效）
